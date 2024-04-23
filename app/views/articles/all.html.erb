@@ -1,0 +1,15 @@
+<div class="navarea navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="links container-fluid">
+    <%= link_to "Wikinimous", articles_path, id: "logo" %>
+    <%= link_to "New Article", articles_new_path, id:"add_new" %>
+  </div>
+</div>
+<div class="container">
+  <ul>
+    <% @articles.each do |article| %>
+    <li style="list-style: none"> <%= link_to article.title, article_path(article), class: "title_link" %></li>
+    <li style="list-style: none"><span class="content_text"> <%= article.content %></span></li>
+    <% end %>
+  </ul>
+
+</div>

@@ -1,0 +1,12 @@
+<div class="form content_text">
+  <%= form_with model: @article do |t| %>
+    <%= t.label :title %>
+    <%= t.text_field :title %>
+    <%= t.label :content %>
+    <%= t.text_field :content %>
+    <%= t.submit class: "button-submit" %>
+  <% end %>
+</div>
+<div class="button-area">
+  <%= link_to "All articles", articles_path, class: "button" %>
+</div>

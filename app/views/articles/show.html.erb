@@ -1,0 +1,19 @@
+<div class="container-main">
+  <div class="title-area">
+    <h2 class="title"><%= @article.title %></h2>
+    <p class="content_text"><%= @article.content %></p>
+  </div>
+  <div class="button-area">
+    <div class="button-area-small">
+      <%= link_to edit_path, class: "button me-2" do %>
+        <i class="fa-solid fa-pen-to-square"></i>
+      <% end %>
+      <%= link_to article_path(@article), class: "button me-2", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </div>
+    <div>
+      <p><%= link_to "Show all articles", articles_path, class: "button-show-all me-2" %></p>
+    </div>
+  </div>
+</div>
